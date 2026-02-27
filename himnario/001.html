@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>1.- A Cristo Quiero</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" /> <!-- Si tienes un CSS adicional -->
+  <style>
+    /* Estilos del control de scroll en la esquina superior derecha */
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3); /* Menos opaco */
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease; /* Transición de opacidad */
+      opacity: 0; /* Iniciar oculto */
+    }
+
+    #scrollControl.show {
+      opacity: 1; /* Mostrar el control */
+    }
+
+    #scrollControl label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    #scrollSpeed {
+      width: 200px; /* Aumentar el ancho del control deslizante */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Contenido de la página -->
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+
+  <div>
+<p><strong>A Cristo quiero servirle</strong>,</p>
+    <p>Mientras tenga que vivir;</p>
+    <p>Sé tú mi ayudador, Señor,</p>
+    <p>Tú eres mi Rey, mi Salvador.</p>
+    <br />
+
+    <p><strong>CORO</strong></p>
+    <p>Contigo viviré, ya nunca sufriré,</p>
+    <p>Tú eres refugio del pobre,</p>
+    <p>Por eso a ti alabaré.</p>
+    <br />
+
+    <p><strong>2</strong></p>
+    <p>Tú eres refugio del pobre,</p>
+    <p>Firme apoyo con tu amor;</p>
+    <p>Por eso yo a ti, alabo, Señor,</p>
+    <p>Por tu bondad que me salvó.</p>
+    <br />
+
+    <p><strong>CORO</strong></p>
+    <p>Contigo viviré, ya nunca sufriré,</p>
+    <p>Tú eres refugio del pobre,</p>
+    <p>Por eso a ti alabaré.</p>
+    <br />
+
+    <p><strong>3</strong></p>
+    <p>Perdido yo me encontraba,</p>
+    <p>Mas tu amor me libertó,</p>
+    <p>Tu muerte en la cruz vida me dio,</p>
+    <p>Alabaré tu nombre aquí.</p>
+    <br />
+
+    <p><strong>CORO</strong></p>
+    <p>Contigo viviré, ya nunca sufriré,</p>
+    <p>Tú eres refugio del pobre,</p>
+    <p>Por eso a ti alabaré.</p>
+    <br />
+
+    <p><strong>4</strong></p>
+    <p>Cuando termine la lucha,</p>
+    <p>A tu lado yo estaré,</p>
+    <p>Contigo viviré y gozaré,</p>
+    <p>Donde tú estás, mi Salvador.</p>
+    <br />
+
+    <p><strong>CORO</strong></p>
+    <p>Contigo viviré, ya nunca sufriré,</p>
+    <p>Tú eres refugio del pobre,</p>
+    <p><em>Por eso a ti alabaré.</em></p>
+    <br />
+
+  </div>
+
+  <!-- Incluir el archivo JavaScript externo -->
+  <script src="scrollControl.js"></script>
+</body>
+</html>

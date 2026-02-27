@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Variables de color según tu preferencia */
+:root {
+    --azul-lldm: #111f40;
+    --oro-lldm: #8e763f;
+    --fondo-gris: #f0f4f8;
+    --blanco: #ffffff;
+}
+
+body {
+  background: url(fondo1b.jpg) center / cover no-repeat fixed; /* Fondo ajustado */
+  font-family: 'Gotham', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 115px; /* Tamaño de fuente adecuado */
+  font-weight: 550;
+  color: #fff; /* Color del texto blanco */
+  margin: 0; /* Eliminar márgenes */
+  overflow-x: hidden; /* Evitar scroll horizontal */
+  -ms-overflow-style: none; /* Ocultar scroll en IE */
+}
+
+div {
+  display: flex; /* Flexbox para centrar */
+  flex-direction: column; /* Columna */
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  text-align: center; /* Texto centrado */
+  padding: 40px;
+  width: calc(100% - 30px); /* Ajuste del ancho */
+  max-width: 1880px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado automático */
+  box-sizing: border-box; /* Incluir padding en el ancho */
+}
+
+p {
+  font-size: 140px; /* Tamaño de fuente ajustado */
+  line-height: 1.2; /* Espaciado entre líneas */
+  padding: 5px; /* Espaciado interno */
+  margin: 20px 0; /* Espaciado vertical */
+}
+
+[contenteditable="true"] {
+  background-color: #f0f0f0;
+  border: 1px dashed #aaa;
+  padding: 5px;
+}
+
+.verso {
+  margin-bottom: 15px;
+}
+
+.numero-verso {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#scrollControl {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo con opacidad */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000; /* Mantener sobre otros elementos */
+  transition: opacity 0.5s ease; /* Transición suave de opacidad */
+  opacity: 0; /* Iniciar oculto */
+}
+
+#scrollControl.show {
+  opacity: 1; /* Mostrar control de scroll */
+}
+
+#scrollControl label {
+  margin-bottom: 8px;
+  font-size: 14px; /* Tamaño de fuente ajustado */
+}
+
+#scrollSpeed {
+  width: 200px; /* Aumentar ancho del control deslizante */
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Scrollbar dorada para que combine */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--oro-lldm);
+    border-radius: 10px;
+}

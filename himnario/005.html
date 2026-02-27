@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>5.- "Adelante, Soldados"</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    #scrollControl.show { opacity: 1; }
+    #scrollControl label { font-size: 14px; }
+    #scrollSpeed { width: 200px; }
+  </style>
+</head>
+<body>
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+  <div>
+    <p><strong>Adelante, soldados</strong> de Cristo,</p>
+    <p>Estandarte de Dios levantad;</p>
+    <p>La victoria y el triunfo está listo,</p>
+    <p>// Proclamad // la verdad.</p>
+    <br />
+    <p><strong>CORO</strong></p>
+    <p>Adelante, marchemos, soldados,</p>
+    <p>No temáis a la espada guerrera;</p>
+    <p>Que la gracia de Dios va adelante,</p>
+    <p>Y allá el General nos espera.</p>
+    <br />
+    <p><strong>2</strong></p>
+    <p>Oh, valientes alzad la bandera,</p>
+    <p>Y la espada de Dios empuñad;</p>
+    <p>La victoria después de la guerra,</p>
+    <p>La obtendréis por vuestra santidad.</p>
+    <br />
+    <p><strong>CORO</strong></p>
+    <p>Adelante, marchemos, soldados,</p>
+    <p>No temáis a la espada guerrera;</p>
+    <p>Que la gracia de Dios va adelante,</p>
+    <p>Y allá el General nos espera.</p>
+    <br />
+    <p><strong>3</strong></p>
+    <p>Estas tropas que ya van marchando,</p>
+    <p>A la patria que El fue a preparar;</p>
+    <p>Al Caudillo que las va guiando,</p>
+    <p>En el cielo van a coronar.</p>
+    <br />
+    <p><strong>CORO</strong></p>
+    <p>Adelante, marchemos, soldados,</p>
+    <p>No temáis a la espada guerrera;</p>
+    <p>Que la gracia de Dios va adelante,</p>
+    <p>Y allá el General nos espera.</p>
+    <br />
+  </div>
+  <script src="scrollControl.js"></script>
+</body>
+</html>

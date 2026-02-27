@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>9.- "Ahora señor"</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    #scrollControl.show { opacity: 1; }
+    #scrollControl label { font-size: 14px; }
+    #scrollSpeed { width: 200px; }
+  </style>
+</head>
+<body>
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+  <div>
+<p>Ahora, Señor que me encuentro a tu lado,</p>
+<p>Huyó la tristeza de mi corazón;</p>
+<p>Mi copa rebosa de tus bendiciones,</p>
+<p>Por eso te alabo, bendito Señor.</p>
+<br />
+<p><strong>CORO</strong></p>
+<p>Guíame ¡oh, Cristo! si, guíame,</p>
+<p>Guíame, Señor // junto a Ti // si, guíame;</p>
+<p>Que nada en el mundo me aparte de Ti.</p>
+<br />
+<p><strong>2</strong></p>
+<p>Hermosa es la senda que Tú nos marcaste,</p>
+<p>No hay otro camino en que se halle la paz.</p>
+<p>Tú eres vida eterna, ¡oh, fuente divina!,</p>
+<p>¡Oh, senda gloriosa de luz y verdad!</p>
+<br />
+<p><strong>CORO</strong></p>
+<p>Guíame ¡oh, Cristo! si, guíame,</p>
+<p>Guíame, Señor // junto a Ti // si, guíame;</p>
+<p>Que nada en el mundo me aparte de Ti.</p>
+<br />
+<p><strong>3</strong></p>
+<p>Mi alma disfruta tu gracia divina,</p>
+<p>Con gran regocijo tributo loor;</p>
+<p>Tu amor me ha llenado, tu amor satisface,</p>
+<p>Por eso te alabo bendito Señor.</p>
+<p><strong>CORO</strong></p>
+<p>Guíame ¡oh, Cristo! si, guíame,</p>
+<p>Guíame, Señor // junto a Ti // si, guíame;</p>
+<p>Que nada en el mundo me aparte de Ti.</p>
+<br />
+  </div>
+  <script src="scrollControl.js"></script>
+</body>
+</html>

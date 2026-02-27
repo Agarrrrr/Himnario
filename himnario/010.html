@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>10.- "A Jesucristo ven"</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    #scrollControl.show { opacity: 1; }
+    #scrollControl label { font-size: 14px; }
+    #scrollSpeed { width: 200px; }
+  </style>
+</head>
+<body>
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+  <div>
+<p><strong>A Jesucristo ven</strong> sin tardar,</p>
+<p>Que entre nosotros hoy El está;</p>
+<p>Y te convida con dulce afán,</p>
+<p>Tierno, diciendo: ¡Ven!</p>
+<p><strong>CORO</strong></p>
+<p>Oh cuan grata es nuestra reunión,</p>
+<p>Cuando allá, Señor en tu mansión;</p>
+<p>Contigo estemos en comunión,</p>
+<p>Gozando eterno bien.</p>
+<br />
+<p><strong>2</strong></p>
+<p>Piensa que El solo puede colmar,</p>
+<p>Tu triste pecho de gozo y paz;</p>
+<p>Y porque anhela tu bienestar,</p>
+<p>Vuelve a decirte: ¡Ven!.</p>
+<p><strong>CORO</strong></p>
+<p>Oh cuan grata es nuestra reunión,</p>
+<p>Cuando allá, Señor en tu mansión;</p>
+<p>Contigo estemos en comunión,</p>
+<p>Gozando eterno bien.</p>
+<br />
+<p><strong>3</strong></p>
+<p>Su voz escucha sin vacilar,</p>
+<p>Y grato acepta lo que hoy te da;</p>
+<p>Tal vez mañana no habrá lugar,</p>
+<p>No te detengas: ¡Ven!.</p>
+<p><strong>CORO</strong></p>
+<p>Oh cuan grata es nuestra reunión,</p>
+<p>Cuando allá, Señor en tu mansión;</p>
+<p>Contigo estemos en comunión,</p>
+<p>Gozando eterno bien.</p>
+<br />
+  </div>
+  <script src="scrollControl.js"></script>
+</body>
+</html>

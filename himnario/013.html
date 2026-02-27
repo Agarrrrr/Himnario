@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>13.- "A la batalla"</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    #scrollControl.show { opacity: 1; }
+    #scrollControl label { font-size: 14px; }
+    #scrollSpeed { width: 200px; }
+  </style>
+</head>
+<body>
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+  <div>
+<p><strong>A la batalla</strong> y a la victoria,</p>
+<p>Vamos con Dios, nuestro Rey;</p>
+<p>Que con su brazo fuerte y robusto,</p>
+<p>Siempre defiende a su grey.</p>
+<p>Pues, sin temor avancemos</p>
+<p>Entusiasmados por fe;</p>
+<p>Mientras alegres cantemos,</p>
+<p>Gloria a Dios, nuestro Rey.</p>
+<p><strong>CORO</strong></p>
+<p>No es la victoria de los ligeros,</p>
+<p>No es de los fuertes la paz;</p>
+<p>Mas de los fieles en Cristo,</p>
+<p>Es el eterno solaz.</p>
+<br />
+<p><strong>2</strong></p>
+<p>A la batalla y a la victoria,</p>
+<p>¿Quién será este buen Rey?;</p>
+<p>¿Cuáles las tropas que así le siguen,</p>
+<p>En esta lucha de fe?</p>
+<p>Es Jehová el valiente,</p>
+<p>De los señores Señor;</p>
+<p>Acompañado por todos,</p>
+<p>Los que aprecian su amor.</p>
+<p><strong>CORO</strong></p>
+<p>No es la victoria de los ligeros,</p>
+<p>No es de los fuertes la paz;</p>
+<p>Mas de los fieles en Cristo,</p>
+<p>Es el eterno solaz.</p>
+<br />
+<p><strong>3</strong></p>
+<p>A la batalla y a la victoria,</p>
+<p>Bajo tan buen General;</p>
+<p>Derrotaremos ya en seguida,</p>
+<p>Todas las fuerzas del mal</p>
+<p>Reinos y tropas del mundo,</p>
+<p>Todos al fin pasarán;</p>
+<p>Mas los amados en Cristo,</p>
+<p>Vida eterna tendrán.</p>
+<p><strong>CORO</strong></p>
+<p>No es la victoria de los ligeros,</p>
+<p>No es de los fuertes la paz;</p>
+<p>Mas de los fieles en Cristo,</p>
+<p>Es el eterno solaz.</p>
+<br />
+  </div>
+  <script src="scrollControl.js"></script>
+</body>
+</html>

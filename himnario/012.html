@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>12.- "Alabad, alma mía"</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    #scrollControl.show { opacity: 1; }
+    #scrollControl label { font-size: 14px; }
+    #scrollSpeed { width: 200px; }
+  </style>
+</head>
+<body>
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+  <div>
+<p><strong>Alabad, alma mía</strong>, al gran Dios Jehová,</p>
+<p>Ensalzad, alma mía al gran Dios de Israel;</p>
+<p>Magnífico en santidad, terrible en loores,</p>
+<p>Hacedor de maravillas, así es Jehová.</p>
+<p><strong>CORO</strong></p>
+<p>//Cantaré// sus proezas al Rey,</p>
+<p>//Yo diré// en presencia de Dios;</p>
+<p>Mi garganta dirá que salvado Israel,</p>
+<p>Por la mano de Dios solo fue.</p>
+<br />
+<p><strong>2</strong></p>
+<p>Alabad, alma mía, al gran Dios Jehová,</p>
+<p>Ensalzad, alma mía al gran Dios de Israel;</p>
+<p>Magnifico en santidad, terrible en loores,</p>
+<p>Hacedor de maravillas, así es Jehová.</p>
+<p><strong>CORO</strong></p>
+<p>//Cantaré// sus proezas al Rey,</p>
+<p>//Yo diré// en presencia de Dios;</p>
+<p>Mi garganta dirá que salvado Israel,</p>
+<p>Por la mano de Dios solo fue.</p>
+<br />
+  </div>
+  <script src="scrollControl.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Paleta LLDM */
+:root {
+    --azul-lldm: #111f40;
+    --oro-lldm: #8e763f;
+    --fondo-gris: #f0f4f8;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--fondo-gris);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Ocultar el botón de traducción */
+button[type="button"] {
+    display: none !important;
+}
+
+/* 1. BUSCADOR FLOTANTE ACTUALIZADO */
+.floating-search {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 320px;
+    z-index: 1000;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid var(--oro-lldm);
+    background-color: var(--blanco);
+    color: var(--azul-lldm);
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Animación suave al enfocar */
+}
+
+#searchInput:focus {
+    box-shadow: 0 4px 20px rgba(142, 118, 63, 0.3);
+    border-color: var(--azul-lldm);
+}
+
+/* Lista de resultados con ANIMACIÓN */
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: var(--blanco);
+    border-radius: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid var(--oro-lldm);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    
+    /* Estado inicial para la animación */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado activo (cuando se busca) */
+.results-list.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.results-list li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--azul-lldm);
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.results-list li a:hover {
+    background-color: #fff9eb;
+    color: var(--oro-lldm);
+}
+
+/* 2. CONTENEDOR DE CANTOS (Centrado restaurado) */
+.container {
+    max-width: 800px; /* Centrado original */
+    margin: 40px auto; 
+    background: var(--blanco);
+    border-radius: 25px; 
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    /* No usar overflow para que funcione el sticky */
+}
+
+/* 3. LETRAS STICKY (Efecto redondeado a cuadrado) */
+dt {
+    background: var(--azul-lldm);
+    color: var(--blanco);
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 4px solid var(--oro-lldm);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: border-radius 0.2s ease;
+}
+
+/* La 'A' empieza redondeada para encajar con el contenedor */
+.container dt:first-of-type {
+    border-radius: 25px 25px 0 0;
+}
+
+/* Al pegarse arriba, se vuelve cuadrada (Requiere el JS del Observer) */
+dt.is-stuck {
+    border-radius: 0 !important;
+}
+
+/* 4. ESTILO DE CANTOS */
+dd { margin: 0; }
+
+dd a {
+    display: block;
+    padding: 18px 30px;
+    color: var(--azul-lldm);
+    text-decoration: none;
+    font-size: 19px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+dd a:hover {
+    background-color: #f9f9f9;
+    color: var(--oro-lldm);
+    padding-left: 40px;
+}
+
+/* === Visor de Cantos (Modo Proyección Limpia) === */
+.hymn-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--blanco);
+    z-index: 2000;
+    display: none; /* Oculto por defecto */
+}
+
+/* El iframe ocupa toda la pantalla detrás del botón invisible */
+#hymnFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2001;
+}
+
+/* Área invisible para cerrar */
+#closeViewer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* Definimos un área de 100x100 pixeles para que sea fácil atinarle */
+    width: 100px; 
+    height: 100px;
+    
+    /* HACERLO INVISIBLE */
+    opacity: 0; 
+    background: transparent;
+    border: none;
+    
+    cursor: pointer; /* Muestra la manita al pasar por encima para saber que ahí está */
+    z-index: 2002; /* Debe estar POR ENCIMA del iframe para recibir el clic */
+}
+
+/* Scrollbar dorada */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--oro-lldm); border-radius: 10px; }

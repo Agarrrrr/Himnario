@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>2.- Acerquese Mi Clamor</title>
+  <link href="edit.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" /> <!-- Si tienes un CSS adicional -->
+  <style>
+    /* Estilos del control de scroll en la esquina superior derecha */
+    #scrollControl {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.3); /* Menos opaco */
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      transition: opacity 0.3s ease; /* Transición de opacidad */
+      opacity: 0; /* Iniciar oculto */
+    }
+
+    #scrollControl.show {
+      opacity: 1; /* Mostrar el control */
+    }
+
+    #scrollControl label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    #scrollSpeed {
+      width: 200px; /* Aumentar el ancho del control deslizante */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Contenido de la página -->
+  <div id="scrollControl">
+    <label for="scrollSpeed">Velocidad del scroll:</label>
+    <input type="range" id="scrollSpeed" min="0" max="150" value="0">
+  </div>
+
+  <div>
+    <p><strong>Acerquese mi clamor delante de ti, oh Jehová;</strong>,</p>
+    <p>Dame entendimiento conforme a tu palabra,</p>
+    <p>Venga mi oración delante de ti; líbrame</p>
+    <p>Conforme a tu dicho.</p>
+    <br />
+
+    <p><strong>*****</strong></p>
+    <p>Venga mi oración delante de ti; mis labios</p>
+    <p>Rebosarán alabanzas</p>
+    <p>Cuando me enseñares tu estatuto</p>
+    <p>//Hablará mi lengua tus dichos//</p>
+    <p>///porque todos Tus mandamientos///</p>
+    <p>Son justicia. //Sea tu mano en mi socorro//</p>
+    <p>Porque tus mandamientos he escogido.</p>
+    <br />
+
+    <p><strong>*****</strong></p>
+    <p>Deseando en tu salud, oh Jehová, y tu ley es mi delicia.</p>
+    <p>//Viva mi alma y alábate, y tus juicios me ayuden//</p>
+    <p>//Yo anduve errante como oveja extraviada//</p>
+    <p>///Busca/// a tu siervo,</p>
+    <p>Señor porque no me he olvidado de tus mandamientos.</p>
+    <br />
+
+    <p><strong>*****</strong></p>
+    <p><strong>Acerquese mi clamor delante de ti, oh Jehová,</strong></p>
+    <p>Dame entendimiento conforme a tu palabra.</p>
+    <p>Venga mi oración delante de ti, líbrame</p>
+    <p>Conforme a tu dicho.</p>
+    <p>Venga mi oración delante de ti.</p>
+
+  </div>
+
+  <!-- Incluir el archivo JavaScript externo -->
+  <script src="scrollControl.js"></script>
+</body>
+</html>
